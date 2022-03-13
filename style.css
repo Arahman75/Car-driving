@@ -1,0 +1,45 @@
+.modal{
+    width: 400px;
+    height: 500px;
+    background-color: aqua;
+    color: blue;
+    box-shadow: 10px 10px 20px black;
+    position: fixed;
+    left: 600px;
+    top: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 2.5s;
+    pointer-events: none;
+   
+}
+.modal.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-title{
+    text-align: center;
+}
+.modal-footer{
+    text-align: center;
+}
+.close{
+    background-color: crimson;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    float: right;
+}
+.open{
+    margin-top: 30rem;
+    background-color: purple;
+    color: white;
+    font-size: 1.3rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px red;
+}
+.modal-open{
+    text-align: center;
+}

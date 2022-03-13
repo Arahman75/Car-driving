@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car driving</title>
+    <style>
+        button{
+            background-color: brown;
+            font-size: 1.3rem;
+            color: white;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="startBtn">Start</button>
+    <button id="stopBtn">Stop</button>
+    <div class="img-div">
+        <img id="car-img" src="car.png" height="200" width="300" alt="">
+    </div>
+    <script>
+        // var carImg =document.getElementById('car-img');
+        // var carStart = setInterval(run,100);
+        // var m = 0;
+        // function run(){
+        //     m+= 5;
+        //     carImg.style.marginLeft = m+'px';
+        // }
+
+        var carImg =document.getElementById('car-img');
+        var carStart;
+        var startBtn = document.getElementById('startBtn');
+        var stopBtn = document.getElementById('stopBtn');
+        var m = 0;
+       
+        startBtn.addEventListener('click', function(){
+            carStart = setInterval(run,100);
+
+            function run(){
+                if(m==1200){
+                    clearInterval(carStart);
+                    m= 0;
+                }
+                else{
+                    m+= 10;
+                    carImg.style.marginLeft =m+'px';
+                }
+            }
+        })
+        stopBtn.addEventListener('click',function(){
+            clearInterval(carStart);
+        })
+
+    </script>
+    
+</body>
+</html>
